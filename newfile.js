@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
   })
 })
 app.get('/page/:pageId', (req, res) => {
-    fs. readFile(`Data/${req.params.pageId}`,'utf8',function(err, description){
+    var title = req.params.pageId
+    fs. readFile(`Data/${title}`,'utf8',function(err, description){
         fs.readdir('./Data', function(err, filelist){
-          var title = req.params.pageId
           var list =template.list(filelist);
           var _template=template.html(title, list, description);
           res.send(_template);
@@ -33,9 +33,7 @@ app.get('/create', (req, res) => {
     <p>
      <textarea name="description" placeholder = "description"></textarea>
     </p>
-
     <input type="submit">
-
     </form>`;
     var list =template.list(filelist);
     var _template = template.html(title, list, description);
@@ -63,13 +61,12 @@ app.get('/update/:pageId', (req, res) => {
       var list =template.list(filelist);
       var update_description = description;
       description = `<form  action="http:/update_page" method="post">
-      <input type="text" name="id" value="${title}">
+      <input type="hidden" name="id" value="${title}">
+      <input type="text" name="title" value="${title}">
       <p>
-       <textarea name="description" placeholder = "description" value = "${title}"></textarea>
+       <textarea name="description" placeholder = "description">${update_description}</textarea>
       </p>
-
       <input type="submit">
-
       </form>`;
       var _template=template.html(title, list, description);
       res.send(_template);
@@ -81,13 +78,13 @@ app.post('/update_page', (req, res) => {
   req.on('data', function(data){
     body = body + data;
   })
-  req.on('end', function(data){
+  req.on('end', function(){
     var post = qs.parse(body);
     var id = post.id;
-    var title = req.params.pageId
+    var title = post.title;
     var description = post.description;
-    fs.rename(`data/&{}`, `data/${title}`, function(err) {
-      fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+    fs.rename(`Data/${id}`, `data/${title}`, function(err) {
+      fs.writeFile(`Data/${title}`, description, 'utf8', function(err){
         res.redirect(`/page/${title}`)
     })
   })
@@ -98,7 +95,7 @@ app.post('/delete_page', (req, res) => {
   req.on('data', function(data){
     body = body + data;
   })
-  req.on('end', function(data){
+  req.on('end', function(){
       var post = qs.parse(body);
       var id = post.id;
       fs.unlink(`data/${id}`, function(err){
