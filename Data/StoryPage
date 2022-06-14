@@ -1,0 +1,44 @@
+<!--<span style = "font-size:24px;color:blue;"><strong>엘레나 사용 설명서</strong> <br></span>-->
+<img src="엘레나.png" width="450" title = "엘레나"> <br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oQU7UqK6DD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p style = "margin-top:40px; color:skyblue; font-size:18px;"> 엘레나는 장래가 촉망되는 피겨 스케이터다.<br>
+얼음 위에서 그려내는 우아한 몸짓에 모두가 넋을 잃곤 했다.<br>
+겨울에 태어난 엘레나는 추위를 모르는 것 같았다.<br>
+때로는 얼음보다 더 차가운 눈빛을 빛내기도 하였다.<br>
+<br>
+엘레나의 운명은 극적으로 추락한 것이 아니다.<br>
+서서히, 아주 오랜 시간에 걸쳐 그녀를 배신하고 있었다.<br>
+믿었던 사람들의 손과 시커먼 마음에 의해서.</p>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/626791fab0d10b6f3e6f5fac/1g1i94ej8';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://elena-6pmrd84ukc.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
